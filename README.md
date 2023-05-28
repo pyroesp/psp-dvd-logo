@@ -20,4 +20,5 @@ Special thanks to [krazynez](https://github.com/krazynez) for helping debug a cr
 
 
 ## License
-Creative Commons [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). 
+Creative Commons [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).  
+The DVD logo comes from wikipedia and it's usage is purely informational. I do not own it.  
