@@ -2,6 +2,11 @@
 This is a sample plugin displaying the dvd logo.  
 
 
+## Video
+Here's what it looks like:  
+https://www.youtube.com/watch?v=Ez4EeNwWtfY  
+
+
 ## Controls
 No controls used, just displays a square.  
 
