@@ -61,7 +61,7 @@ int running;
 
 
 // convert 0-359 degree value to u32 ABGR color
-u32 color_Wheel(int degrees);
+u32 color_wheel(int degrees);
 
 
 // main thread
@@ -82,7 +82,7 @@ int main_thread(SceSize args, void *argp){
 	s16 logo_vx = (logo_x & 1) ? -1 : 1;
 	s16 logo_vy = (logo_y & 1) ? -1 : 1;
 	// logo color
-	u32 logo_color = color_Wheel((int)((tick / 1000) % 360));
+	u32 logo_color = color_wheel((int)((tick / 1000) % 360));
 	
 	// main menu
 	while (running){
@@ -93,7 +93,7 @@ int main_thread(SceSize args, void *argp){
 			// update tick value when changing direction
 			sceRtcGetCurrentTick(&tick);
 			// change color based on tick value
-			logo_color = color_Wheel((int)((tick / 1000) % 360));
+			logo_color = color_wheel((int)((tick / 1000) % 360));
 		}
 		// check y collision
 		if ((logo_y + logo_vy) >= (SCREEN_H - LOGO_H) || (logo_y + logo_vy) <= 0){
@@ -102,7 +102,7 @@ int main_thread(SceSize args, void *argp){
 			// update tick value when changing direction
 			sceRtcGetCurrentTick(&tick);
 			// change color based on tick value
-			logo_color = color_Wheel((int)((tick / 1000) % 360));
+			logo_color = color_wheel((int)((tick / 1000) % 360));
 		}
 
 		// move logo
@@ -170,7 +170,7 @@ int module_stop(SceSize args, void *argp){
 
 
 // convert 0-359 degree value to u32 ABGR color
-u32 color_Wheel(int degrees){
+u32 color_wheel(int degrees){
 	u8 red = 0, green = 0, blue = 0;
 	degrees = degrees % 360;
 	
